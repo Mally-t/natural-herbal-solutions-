@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Herbal Solutions | Green World Wellness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f9f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header with Logo */
+        header {
+            background: linear-gradient(to right, #2a9d8f, #1d6f65);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .brand-logo {
+            height: 70px;
+            width: auto;
+            border-radius: 10px;
+        }
+        
+        .brand-name {
+            font-size: 2.8em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        /* Contact Badge */
+        .contact-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .intro-box {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 6px solid #2a9d8f;
+        }
+        
+        .intro-box h2 {
+            color: #1d6f65;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0f2e9;
+        }
+        
+        .highlight {
+            background-color: #e8f5f3;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #2a9d8f;
+        }
+        
+        /* Services & Products */
+        .services {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .service-box, .product-box {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+        
+        .service-header, .product-header {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 18px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .service-body, .product-body {
+            padding: 20px;
+        }
+        
+        .price {
+            color: #2a9d8f;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        
+        /* Product Gallery */
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            background-color: #f0f9f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2a9d8f;
+            font-size: 2.5em;
+        }
+        
+        .product-info {
+            padding: 15px 10px;
+        }
+        
+        .product-name {
+            font-weight: bold;
+            color: #1d6f65;
+            margin-bottom: 5px;
+        }
+        
+        /* Registration Link Box */
+        .registration-box {
+            background: linear-gradient(135deg, #2a9d8f 0%, #1d6f65 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .reg-button {
+            display: inline-block;
+            background: white;
+            color: #2a9d8f;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        
+        .reg-button:hover {
+            background: #f0f9f0;
+            transform: translateY(-3px);
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(to right, #e8f5f3, #ffffff);
+            border-radius: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #2a9d8f;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 15px 10px;
+            box-shadow: 0 4px 10px rgba(42, 157, 143, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #1d6f65;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(42, 157, 143, 0.4);
+        }
+        
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #1da851;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #1d6f65;
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .brand-name {
+                font-size: 2.2em;
+            }
+            
+            .brand-logo {
+                height: 60px;
+            }
+            
+            .cta-button {
+                padding: 16px 30px;
+                font-size: 1.1em;
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .product-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+            
+            .contact-badge {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <!-- GREEN WORLD LOGO - REPLACE WITH YOUR LOGO IMAGE -->
+                <img src="greenworld-logo.jpg" alt="Green World Logo" class="brand-logo">
+                <div>
+                    <div class="brand-name">NATURAL HERBAL SOLUTIONS</div>
+                    <p class="tagline">Your Health, Our Natural Priority.</p>
+                    <p>Authorized Green World Distributor | Johannesburg</p>
+                </div>
+            </div>
+            
+            <div class="contact-badge">
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <span>Malvin</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Johannesburg</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+27 71 952 2556</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>thembanmalvin@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="intro-box">
+                <h2>Welcome to Natural Wellness</h2>
+                <p>Natural Herbal Solutions is a wellness-focused health consultancy specializing in <strong>Green World herbal products</strong>. We provide free professional consultations and affordable full body health checks, helping clients understand their health status and choose natural solutions to support overall wellbeing.</p>
+                
+                <div class="highlight">
+                    <p>We are committed to promoting natural, herbal-based health solutions for better living.</p>
+                    <p>In addition, we offer business opportunities for individuals who want to make money by joining us as Green World distributors, with guidance and support provided.</p>
+                </div>
+            </div>
+            
+            <div class="services">
+                <div class="service-box">
+                    <div class="service-header">
+                        <i class="fas fa-stethoscope"></i> Our Services
+                    </div>
+                    <div class="service-body">
+                        <p><i class="fas fa-check-circle" style="color:#2a9d8f;"></i> Free professional health consultation</p>
+                        <p><i class="fas fa-check-circle" style="color:#2a9d8f;"></i> Full body health check – <span class="price">R450 only</span></p>
+                        <p><i class="fas fa-check-circle" style="color:#2a9d8f;"></i> Sale of genuine Green World herbal products</p>
+                        <p><i class="fas fa-check-circle" style="color:#2a9d8f;"></i> Distributor recruitment & income opportunity</p>
+                        <p><i class="fas fa-check-circle" style="color:#2a9d8f;"></i> Health guidance using natural solutions</p>
+                    </div>
+                </div>
+                
+                <!-- GREEN WORLD PRODUCTS SECTION WITH IMAGES -->
+                <div class="product-box">
+                    <div class="product-header">
+                        <i class="fas fa-leaf"></i> Green World Health Products
+                    </div>
+                    <div class="product-body">
+                        <p>We offer authentic Green World herbal supplements for various health needs:</p>
+                        
+                        <div class="product-gallery">
+                            <!-- PRODUCT 1 - REPLACE IMAGE -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <!-- REPLACE: ganoderma.jpg with your product image -->
+                                    <img src="ganoderma.jpg" alt="Ganoderma Capsules" style="width:100%; height:100%; object-fit:cover;">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Ganoderma Capsules</div>
+                                    <p style="font-size:0.9em; color:#666;">Immune support & energy</p>
+                                </div>
+                            </div>
+                            
+                            <!-- PRODUCT 2 - REPLACE IMAGE -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <!-- REPLACE: spirulina.jpg with your product image -->
+                                    <img src="spirulina.jpg" alt="Spirulina Powder" style="width:100%; height:100%; object-fit:cover;">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Spirulina Powder</div>
+                                    <p style="font-size:0.9em; color:#666;">Nutrition & detoxification</p>
+                                </div>
+                            </div>
+                            
+                            <!-- PRODUCT 3 - REPLACE IMAGE -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <!-- REPLACE: cordyceps.jpg with your product image -->
+                                    <img src="cordyceps.jpg" alt="Cordyceps" style="width:100%; height:100%; object-fit:cover;">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Cordyceps</div>
+                                    <p style="font-size:0.9em; color:#666;">Stamina & respiratory health</p>
+                                </div>
+                            </div>
+                            
+                            <!-- PRODUCT 4 - REPLACE IMAGE -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <!-- REPLACE: ginkgo.jpg with your product image -->
+                                    <img src="ginkgo.jpg" alt="Ginkgo Biloba" style="width:100%; height:100%; object-fit:cover;">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Ginkgo Biloba</div>
+                                    <p style="font-size:0.9em; color:#666;">Memory & circulation</p>
+                                </div>
+                            </div>
+                            
+                            <!-- PRODUCT 5 - REPLACE IMAGE -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <!-- REPLACE: weightloss.jpg with your product image -->
+                                    <img src="weightloss.jpg" alt="Weight Management" style="width:100%; height:100%; object-fit:cover;">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Weight Management</div>
+                                    <p style="font-size:0.9em; color:#666;">Natural slimming formulas</p>
+                                </div>
+                            </div>
+                            
+                            <!-- PRODUCT 6 - REPLACE IMAGE -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <!-- REPLACE: jointcare.jpg with your product image -->
+                                    <img src="jointcare.jpg" alt="Joint Care" style="width:100%; height:100%; object-fit:cover;">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-name">Joint Care</div>
+                                    <p style="font-size:0.9em; color:#666;">Bone & joint health</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 20px; font-style: italic; color: #2a9d8f; text-align:center;">
+                            <i class="fas fa-info-circle"></i> All products are 100% natural, certified, and clinically tested.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- REGISTRATION LINK SECTION -->
+                <div class="registration-box">
+                    <h3><i class="fas fa-user-plus"></i> Become a Green World Distributor</h3>
+                    <p>Join our team and start your own wellness business. Earn income while helping others achieve better health.</p>
+                    <p>Register online now to get started:</p>
+                    <a href="https://jsaf.world-food.com/share-registration/index.html?id=10425560" target="_blank" class="reg-button">
+                        <i class="fas fa-clipboard-check"></i> Register Online Here
+                    </a>
+                    <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.9;">Registration ID: 10425560</p>
+                </div>
+                
+                <div class="service-box">
+                    <div class="service-header">
+                        <i class="fas fa-briefcase"></i> Business Opportunity
+                    </div>
+                    <div class="service-body">
+                        <p>Join us as a Green World distributor and build your own wellness business. We provide:</p>
+                        <p><i class="fas fa-gem" style="color:#2a9d8f;"></i> Comprehensive training & support</p>
+                        <p><i class="fas fa-gem" style="color:#2a9d8f;"></i> Genuine products with proven results</p>
+                        <p><i class="fas fa-gem" style="color:#2a9d8f;"></i> Flexible income opportunity</p>
+                        <p><i class="fas fa-gem" style="color:#2a9d8f;"></i> Growing wellness market</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Start Your Wellness Journey Today</h2>
+            <p>Get a free consultation, explore Green World products, or book your full body check for only R450.</p>
+            <p>Interested in products or the business opportunity? Contact me directly!</p>
+            
+            <a href="mailto:thembanmalvin@gmail.com?subject=Natural Herbal Solutions Inquiry" class="cta-button">
+                <i class="fas fa-envelope"></i> Email Me
+            </a>
+            
+            <a href="https://wa.me/27719522556?text=Hi%20Malvin,%20I'm%20interested%20in%20Green%20World%20products%20from%20your%20website" class="cta-button whatsapp-button" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp Me
+            </a>
+            
+            <a href="tel:+27719522556" class="cta-button">
+                <i class="fas fa-phone"></i> Call Me
+            </a>
+            
+            <div style="margin-top: 25px; background: white; padding: 20px; border-radius: 10px;">
+                <p><strong>Contact Malvin directly:</strong></p>
+                <p><i class="fas fa-phone"></i> +27 71 952 2556 | <i class="fas fa-map-marker-alt"></i> Johannesburg</p>
+                <p><i class="fas fa-envelope"></i> thembanmalvin@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div style="display:flex; justify-content:center; align-items:center; gap:15px; margin-bottom:15px;">
+                <!-- FOOTER LOGO - SAME LOGO -->
+                <img src="greenworld-logo.jpg" alt="Green World Logo" style="height:50px; border-radius:8px;">
+                <div>
+                    <p style="font-size:1.2em;"><strong>NATURAL HERBAL SOLUTIONS</strong></p>
+                    <p>Malvin | Green World Distributor</p>
+                </div>
+            </div>
+            <p>Authorized Green World Herbal Products Distributor | Based in Johannesburg</p>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +27 71 952 2556 | <i class="fas fa-envelope"></i> thembanmalvin@gmail.com</p>
+                <p>Free Consultations | Full Body Checks | Green World Products | Business Opportunities</p>
+                <p>© 2025 Natural Herbal Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple interactive button effect
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                if(this.classList.contains('whatsapp-button')) {
+                    alert('Opening WhatsApp to message Malvin at +27 71 952 2556');
+                } else if(this.innerHTML.includes('Email')) {
+                    alert('Opening email app to contact thembanmalvin@gmail.com');
+                } else {
+                    alert('Thank you for your interest in Natural Herbal Solutions!');
+                }
+            });
+        });
+        
+        // Make product cards interactive
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 8px 20px rgba(0,0,0,0.12)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '0 4px 10px rgba(0,0,0,0.08)';
+            });
+        });
+        
+        // Registration link confirmation
+        document.querySelector('.reg-button').addEventListener('click', function() {
+            alert('Opening the Green World registration page. Use ID: 10425560');
+        });
+    </script>
+</body>
+</html>
