@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Natural Herbal Solutions | Green World</title>
+    <style>
+        body { font-family: Arial; padding: 20px; text-align: center; }
+        h1 { color: #2a9d8f; }
+        .contact { background: #f0f9f0; padding: 20px; border-radius: 10px; margin: 20px; }
+        .button { background: #2a9d8f; color: white; padding: 15px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>NATURAL HERBAL SOLUTIONS</h1>
+    <p>Green World Herbal Products | Johannesburg</p>
+    
+    <div class="contact">
+        <p><strong>Contact Malvin:</strong></p>
+        <p>📞 +27 71 952 2556</p>
+        <p>📧 thembanmalvin@gmail.com</p>
+    </div>
+    
+    <a href="mailto:thembanmalvin@gmail.com" class="button">Email</a>
+    <a href="https://wa.me/27719522556" class="button">WhatsApp</a>
+    
+    <p style="margin-top: 30px;"><a href="https://jsaf.world-food.com/share-registration/index.html?id=10425560">Register as Distributor</a></p>
+    
+    <p>© 2025 Natural Herbal Solutions</p>
+</body>
+</html>
